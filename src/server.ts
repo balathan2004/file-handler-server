@@ -25,6 +25,10 @@ app.use(
 
 app.use("/minimal_blog", BlogRouter);
 
+app.get("/test", (req: Request, res: Response) => {
+  res.json({ status: 200, message: "hello world !" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
